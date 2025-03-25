@@ -18,3 +18,8 @@ steps:
       - |
         pytest --maxfail=1 --disable-warnings -q tests/
 
+# Use a custom service account (replace with your actual SA info).
+serviceAccount: "projects/YOUR_PROJECT_ID/serviceAccounts/YOUR_SA_NAME@YOUR_PROJECT_ID.iam.gserviceaccount.com"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
