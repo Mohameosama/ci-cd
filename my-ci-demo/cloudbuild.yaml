@@ -8,14 +8,15 @@ steps:
       - |
         pip install --upgrade pip
         pip install pytest==7.4.2
-  # 2) Run tests
-  - name: "python:3.9"
-    id: "Run tests"
-    entrypoint: "bash"
-    args:
-      - "-c"
-      - |
         pytest --maxfail=1 --disable-warnings -q tests/
+  # 2) Run tests
+  # - name: "python:3.9"
+  #   id: "Run tests"
+  #   entrypoint: "bash"
+  #   args:
+  #     - "-c"
+  #     - |
+  #       pytest --maxfail=1 --disable-warnings -q tests/
 
 # Use a custom service account (replace with your actual SA info).
 serviceAccount: "projects/YOUR_PROJECT_ID/serviceAccounts/YOUR_SA_NAME@YOUR_PROJECT_ID.iam.gserviceaccount.com"
