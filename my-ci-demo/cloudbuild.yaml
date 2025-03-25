@@ -9,6 +9,8 @@ steps:
         pip install --upgrade pip
         pip install pytest==7.4.2
         pytest --maxfail=1 --disable-warnings -q tests/
+        python train.py
+
   # 2) Run tests
   # - name: "python:3.9"
   #   id: "Run tests"
